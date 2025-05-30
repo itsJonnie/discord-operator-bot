@@ -2,7 +2,6 @@ from discord.ext import commands
 import discord
 import os
 from dotenv import load_dotenv
-from keep_alive import keep_alive
 
 # Load environment variables from .env
 load_dotenv()
@@ -117,5 +116,5 @@ if not TOKEN:
     raise ValueError(
         "No Discord token found. Please set the DISCORD_TOKEN environment variable."
     )
-keep_alive()
+
 bot.run(TOKEN)
